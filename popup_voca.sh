@@ -22,18 +22,17 @@ function translate {
 }
 
 function display_popup {
-    zenity --notification --timeout=3 --text "$1 \\n 
+    zenity --notification --timeout=5 --text "$1 \\n 
 $2"
-    #TODO change time duration / color / brightness
 }
 
 
 ## Variables
-vocab_file="$HOME/Repos/popup-vocabulary/vocabulary.txt"
+vocab_file="$HOME/Repos/utils/vocabulary/vocabulary_english.txt"
 random_line=$(get_random_line)
 random_word=$(get_word $random_line)
 
-
+#TODO sed line to remove white line / etc
 # if an empty line is picked
 while [ -z "$random_word" ]; do
     random_line=$(get_random_line)
