@@ -1,8 +1,12 @@
 #!/bin/bash
 
+#TODO
+#language
+#notif_timeout
+
+
 # TODO 
 # Check des packages zenity / translate shell
-# laisser une variable pour la langue ?
 # laisser la possibilité d'avoir la traduction complète ? (pas trouvé comment on fait encore)
 
 function get_random_line {
@@ -32,7 +36,7 @@ vocab_file="$HOME/Repos/utils/vocabulary/vocabulary_english.txt"
 random_line=$(get_random_line)
 random_word=$(get_word $random_line)
 
-#TODO sed line to remove white line / etc
+
 # if an empty line is picked
 while [ -z "$random_word" ]; do
     random_line=$(get_random_line)
